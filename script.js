@@ -12,8 +12,6 @@ let weather = {
         const{ icon, description } = data.weather[0];
         const {temp, humidity } = data.main;
         const { speed } = data.wind;
-        const {coord} = weather.coord;
-        
         
         console.log(name, icon, description, temp, humidity, speed);
         document.querySelector(".city").innerText = "Todays weather in: " + name;
@@ -23,7 +21,6 @@ let weather = {
         document.querySelector(".humidity").innerText = "Humidity: " + humidity + "%";
         document.querySelector(".wind").innerText="Wind speed: " + speed + "km/hr";
         document.querySelector(".weather").classList.remove("loading");
-        document.querySelector(".detailsOfInfo").innerText = name;
  },
         search: function (){
             this.fetchWeather(document.querySelector(".searchbar").value);
