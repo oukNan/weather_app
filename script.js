@@ -7,11 +7,12 @@ let weather = {
         .then((data) => this.displayWeather(data)); //log data to console for user to see
 
     },
-    displayWeather: function(data) { //assign particular pieces from object
+    displayWeather: function(data, weather) { //assign particular pieces from object
         const { name } = data;
         const{ icon, description } = data.weather[0];
         const {temp, humidity } = data.main;
         const { speed } = data.wind;
+        const {coord} = weather.coord;
         
         
         console.log(name, icon, description, temp, humidity, speed);
