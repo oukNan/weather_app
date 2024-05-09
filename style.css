@@ -12,6 +12,9 @@ body {
     color: white;
     font-size: 3em;
 }
+#listWeather {
+    color:white;
+}
 .card{
     background-color: #000000d0;
     padding: 2em;
@@ -20,9 +23,6 @@ body {
     margin: 1em;
     max-width: 420px;
     font-family: Arial, Helvetica, sans-serif;
-}
-.weather{
-    color: white;
 }
 .temp{
     font-size: 2em;
