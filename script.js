@@ -12,8 +12,8 @@ let weather = {
         const{ icon, description } = data.weather[0];
         const {temp, humidity } = data.main;
         const { speed } = data.wind;
-        
         console.log(name, icon, description, temp, humidity, speed);
+        
         var d = document.getElementByClassName("temp");
         var n = parseFloat(d);
         document.querySelector(".city").innerText = "Todays weather in: " + name;
