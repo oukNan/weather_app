@@ -15,6 +15,9 @@ body {
 #listWeather {
     color:white;
 }
+.listDetail {
+    color:white;
+}
 .card{
     background-color: #000000d0;
     padding: 2em;
