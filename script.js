@@ -3,6 +3,7 @@ let weather = {
     fetchWeather: function(city) {
         fetch("https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric&appid=" + this.apiKey
         )
+        fetch("https://api.openweathermap.org/data/2.5/forecast/daily?lat=44.34&lon=10.99&cnt=7&appid=" {this.apiKey})
         .then((response) => response.json()) //the promise to return data
         .then((data) => this.displayWeather(data)); //log data to console for user to see
 
@@ -12,7 +13,8 @@ let weather = {
         const{ icon, description } = data.weather[0];
         const {temp, humidity } = data.main;
         const { speed } = data.wind;
-        console.log(name, icon, description, temp, humidity, speed);
+        const { city } = data.city;
+        console.log(name, icon, description, temp, humidity, speed, city);
         
         var d = document.getElementByClassName("temp");
         var n = parseFloat(d);
@@ -22,6 +24,7 @@ let weather = {
         document.querySelector(".temp").innerText= n*9 / 5+32.5;
         document.querySelector(".humidity").innerText = "Humidity: " + humidity + "%";
         document.querySelector(".wind").innerText="Wind speed: " + speed + "km/hr";
+        document.querySelector(".detailsOfInfo").innerText= "Details: " + city;
         document.querySelector(".weather").classList.remove("loading");
  },
         search: function (){
