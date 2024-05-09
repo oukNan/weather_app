@@ -23,7 +23,7 @@ let weather = {
         document.querySelector(".humidity").innerText = "Humidity: " + humidity + "%";
         document.querySelector(".wind").innerText="Wind speed: " + speed + "km/hr";
         document.querySelector(".weather").classList.remove("loading");
-        document.querySelector("#listWeather").innerText = name;
+        document.querySelector(".detailsOfInfo").innerText = name;
  },
         search: function (){
             this.fetchWeather(document.querySelector(".searchbar").value);
