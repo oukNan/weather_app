@@ -3,7 +3,6 @@ let weather = {
     fetchWeather: function(city) {
         fetch("https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric&appid=" + this.apiKey
         )
-        fetch("https://api.openweathermap.org/data/2.5/forecast/daily?lat={lat}&lon={lon}&cnt={cnt}&appid={this.apiKey}" + city)
         .then((response) => response.json()) //the promise to return data
         .then((data) => this.displayWeather(data)); //log data to console for user to see
 
@@ -20,8 +19,7 @@ let weather = {
         document.querySelector(".icon").src="http://openweathermap.org/img/wn/" + icon + ".png";
         document.querySelector(".description").innerText= description;
         document.querySelector(".temp").innerText= temp*9 / 5+32.5;
-        //document.querySelector(".humidity").innerText = "Humidity: " + humidity + "%";
-        document.querySelector(".humidity").innerText = "Daily forecast " + weather;
+        document.querySelector(".humidity").innerText = "Humidity: " + humidity + "%";
         document.querySelector(".wind").innerText="Wind speed: " + speed + "km/hr";
         document.querySelector(".weather").classList.remove("loading");
  },
