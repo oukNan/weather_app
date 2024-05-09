@@ -14,10 +14,12 @@ let weather = {
         const { speed } = data.wind;
         
         console.log(name, icon, description, temp, humidity, speed);
+        var d = document.getElementByClassName("temp");
+        var n = parseFloat(d);
         document.querySelector(".city").innerText = "Todays weather in: " + name;
         document.querySelector(".icon").src="http://openweathermap.org/img/wn/" + icon + ".png";
         document.querySelector(".description").innerText= description;
-        document.querySelector(".temp").innerText= temp*9 / 5+32.5;
+        document.querySelector(".temp").innerText= n*9 / 5+32.5;
         document.querySelector(".humidity").innerText = "Humidity: " + humidity + "%";
         document.querySelector(".wind").innerText="Wind speed: " + speed + "km/hr";
         document.querySelector(".weather").classList.remove("loading");
