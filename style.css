@@ -30,6 +30,10 @@ body {
 .city {
     color:white;
 }
+.detailsOfInfo {
+    color: white;
+
+}
 .temp{
     font-size: 2em;
     color:white;
