@@ -12,8 +12,9 @@ let weather = {
         const{ icon, description } = data.weather[0];
         const {temp, humidity } = data.main;
         const { speed } = data.wind;
-
-        console.log(name, icon, description, temp, humidity, speed);
+        const { list } = data.weather[2];
+        
+        console.log(name, icon, description, temp, humidity, speed, list);
         document.querySelector(".city").innerText = "Todays weather in: " + name;
         document.querySelector(".icon").src="http://openweathermap.org/img/wn/" + icon + ".png";
         document.querySelector(".description").innerText= description;
