@@ -28,6 +28,9 @@ let weather = {
 };
 document.querySelector(".searcher"),addEventListener("click", function() {
     weather.search();
+    string search_ = document.getElementByClassName(".searcher")
+    if(!search_)
+        alert("WELCOME")
 });
 
 document.querySelector(".searchbar").addEventListener("keyup", function(event){
