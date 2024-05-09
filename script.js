@@ -13,7 +13,6 @@ let weather = {
         const{ icon, description } = data.weather[0];
         const {temp, humidity } = data.main;
         const { speed } = data.wind;
-        //const {feels_like } = data.list.feels_like.day;
 
         console.log(name, icon, description, temp, humidity, speed);
         document.querySelector(".city").innerText = "Todays weather in: " + name;
