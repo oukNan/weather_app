@@ -3,8 +3,6 @@ let weather = {
     fetchWeather: function(city) {
         fetch("https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric&appid=" + this.apiKey
         )
-        fetch("https://api.openweathermap.org/data/2.5/forecast/daily?q=London&units=metric&cnt=7&appid={this.apiKey}")
-        fetch("https://api.openweathermap.org/data/2.5/forecast/daily?lat={lat}&lon={lon}&cnt={cnt}&appid={this.apiKey}" + city)
         .then((response) => response.json()) //the promise to return data
         .then((data) => this.displayWeather(data)); //log data to console for user to see
 
@@ -17,7 +15,7 @@ let weather = {
         const{ icon, description } = data.weather[0];
         const {temp, humidity } = data.main;
         const { speed } = data.wind;
-        const {city } = city.coord.lat;
+       
 
         console.log(name, icon, description, temp, humidity, speed);
         document.querySelector(".city").innerText = "Todays weather in: " + name;
@@ -28,14 +26,13 @@ let weather = {
         document.querySelector(".humidity").innerText = "Daily forecast " + weather;
         document.querySelector(".wind").innerText="Wind speed: " + speed + "km/hr";
         document.querySelector(".weather").classList.remove("loading");
+        document.
  },
-    displayWeather: function(data) {
-        const { city } = data;
-        const {citydetail } = data.id;
-
-        console.log(city, citydetail);
-        document.querySelector(".detailsOfInfo").innerText = citydetail;
-    },
+    const x = document.getElementById("listWeather");
+    x.addEventListener('click', function_to_update);
+        function function_to_update(){
+            let alertyou = "What about this city?");
+        }
         search: function (){
             this.fetchWeather(document.querySelector(".searchbar").value);
         },
