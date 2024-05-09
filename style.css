@@ -27,8 +27,12 @@ body {
     max-width: 420px;
     font-family: Arial, Helvetica, sans-serif;
 }
+.city {
+    color:white;
+}
 .temp{
     font-size: 2em;
+    color:white;
 }
 .weather.loading {
     visibility: hidden;
