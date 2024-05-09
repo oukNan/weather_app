@@ -26,8 +26,8 @@ let weather = {
         document.querySelector(".humidity").innerText = "Daily forecast " + weather;
         document.querySelector(".wind").innerText="Wind speed: " + speed + "km/hr";
         document.querySelector(".weather").classList.remove("loading");
-        document.
- },
+        
+     },
     const x = document.getElementById("listWeather");
     x.addEventListener('click', function_to_update);
         function function_to_update(){
