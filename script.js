@@ -24,11 +24,6 @@ let weather = {
         document.querySelector(".wind").innerText="Wind speed: " + speed + "km/hr";
         document.querySelector(".weather").classList.remove("loading");
  },
-    displayWeather: function(data) {
-        const { city } = data;
-        console.log(city);
-        document.querySelector(".detailsOfInfo").innerText = city;
-    },
         search: function (){
             this.fetchWeather(document.querySelector(".searchbar").value);
         },
