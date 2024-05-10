@@ -46,7 +46,7 @@ let weeklyWeather = {
         document.querySelector(".listWeather").innerText = temp;
     },
         search: function() {
-            this.fetchWeather(document.querySelector(".searchbar").value);
+            this.fetchWeather(document.querySelector(".weeklysearch").value);
         },
 }
 
