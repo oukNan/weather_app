@@ -22,17 +22,11 @@ let weather = {
         document.querySelector(".icon").src="http://openweathermap.org/img/wn/" + icon + ".png";
         document.querySelector(".description").innerText= description;
         document.querySelector(".temp").innerText= temp*9 / 5+32.5;
-        //document.querySelector(".humidity").innerText = "Humidity: " + humidity + "%";
-        document.querySelector(".humidity").innerText = "Daily forecast " + weather;
+        document.querySelector(".humidity").innerText = "Humidity: " + humidity + "%";
         document.querySelector(".wind").innerText="Wind speed: " + speed + "km/hr";
         document.querySelector(".weather").classList.remove("loading");
         
      },
-    const x = document.getElementById("listWeather");
-    x.addEventListener('click', function_to_update);
-        function function_to_update(){
-            let alertyou = "What about this city?");
-        }
         search: function (){
             this.fetchWeather(document.querySelector(".searchbar").value);
         },
