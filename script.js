@@ -49,6 +49,11 @@ let weeklyWeather = {
             this.fetchWeather(document.querySelector(".weeklysearch").value);
         },
 }
+document.querySelector(".weeklysearch").addEventListener("keyup", function(event) {
+    if(event.key == "Enter"")
+        weeklyWeather.search();
+});
+weeklyWeather.fetchWeather();
 
 document.querySelector(".searchbar").addEventListener("keyup", function(event){
     if(event.key == "Enter")
