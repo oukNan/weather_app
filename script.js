@@ -32,4 +32,8 @@ document.querySelector(".searchbar").addEventListener("keyup", function(event){
     if(event.key == "Enter")
     weather.search();
 });
+document.query(".listWeather").addEventListener("keyup", function(event) {
+    if(event.key == "Enter")
+        alert("Thanks");
+});
 weather.fetchWeather()
