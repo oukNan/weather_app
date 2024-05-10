@@ -4,14 +4,9 @@ let weather = {
         fetch("https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric&appid=" + this.apiKey
         )
         fetch("https://api.openweathermap.org/data/2.5/forecast/daily?q=London&units=metric&cnt=7&appid={this.apiKey}")
-        fetch("https://api.openweathermap.org/data/2.5/forecast/daily?lat={lat}&lon={lon}&cnt={cnt}&appid={this.apiKey}" + city)
         .then((response) => response.json()) //the promise to return data
         .then((data) => this.displayWeather(data)); //log data to console for user to see
-
     },
-
-
-
     displayWeather: function(data) { //assign particular pieces from object
         const { name } = data;
         const{ icon, description } = data.weather[0];
@@ -31,10 +26,8 @@ let weather = {
  },
     displayWeather: function(data) {
         const { city } = data;
-        const {citydetail } = data.id;
-
-        console.log(city, citydetail);
-        document.querySelector(".detailsOfInfo").innerText = citydetail;
+        console.log(city);
+        document.querySelector(".detailsOfInfo").innerText = city;
     },
         search: function (){
             this.fetchWeather(document.querySelector(".searchbar").value);
