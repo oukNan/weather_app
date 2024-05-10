@@ -41,7 +41,7 @@ let weeklyWeather = {
     },
     displayWeeklyWeather: function(data) {
         const { temp } = data.main;
-        console.log(temp);
+        alert("hey");
 
         document.querySelector(".listWeather").innerText = temp;
     },
