@@ -7,6 +7,7 @@ let weather = {
         .then((data) => this.displayWeather(data)); //log data to console for user to see
 
     },
+    
     displayWeather: function(data) { //assign particular pieces from object
         const { name } = data;
         const{ icon, description } = data.weather[0];
@@ -29,6 +30,13 @@ let weather = {
             this.fetchWeather(document.querySelector(".searchbar").value);
         },
 };
+
+let weeklyWeather = {
+    "apiKey": "858688eca31355a69fbb43d48c885e20",
+    fetchWeather: function(city) {
+
+    }
+}
 
 document.querySelector(".searchbar").addEventListener("keyup", function(event){
     if(event.key == "Enter")
