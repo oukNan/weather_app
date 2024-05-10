@@ -13,20 +13,19 @@ let weather = {
         const {temp, humidity } = data.main;
         const { speed } = data.wind;
         const {city } = city.coord.lat;
-
+        
         console.log(name, icon, description, temp, humidity, speed);
         document.querySelector(".city").innerText = "Todays weather in: " + name;
         document.querySelector(".icon").src="http://openweathermap.org/img/wn/" + icon + ".png";
         document.querySelector(".description").innerText= description;
-        document.querySelector(".temp").innerText= temp*9 / 5+32.5;
-        //document.querySelector(".humidity").innerText = "Humidity: " + humidity + "%";
-        document.querySelector(".humidity").innerText = "Daily forecast " + weather;
+        document.querySelector(".temp").innerText= temp*9 / 5 + 32.5;
+        document.querySelector(".humidity").innerText = "Humidity: " + humidity + "%";
         document.querySelector(".wind").innerText="Wind speed: " + speed + "km/hr";
         document.querySelector(".weather").classList.remove("loading");
- },
-        search: function (){
-            this.fetchWeather(document.querySelector(".searchbar").value);
-        },
+     },
+    search: function (){
+        this.fetchWeather(document.querySelector(".searchbar").value);
+    },
 };
 
 document.querySelector(".searchbar").addEventListener("keyup", function(event){
