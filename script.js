@@ -27,10 +27,6 @@ let weather = {
             this.fetchWeather(document.querySelector(".searchbar").value);
         },
 };
-document.querySelector(".searcher"),addEventListener("click", function() {
-    weather.search();
-    
-});
 
 document.querySelector(".searchbar").addEventListener("keyup", function(event){
     if(event.key == "Enter")
