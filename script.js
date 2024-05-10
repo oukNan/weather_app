@@ -23,7 +23,7 @@ let weather = {
         document.querySelector(".description").innerText= description;
         document.querySelector(".temp").innerText= n * 9 / 5 + 32.5;
         document.querySelector(".humidity").innerText = "Humidity: " + humidity + "%";
-        document.querySelector(".wind").innerText="Wind speed: " + speed + "km/hr";
+        document.querySelector(".wind").innerText="Wind speed: " + speed * 0.621371 + "mph";
         document.querySelector(".weather").classList.remove("loading");
         
      },
