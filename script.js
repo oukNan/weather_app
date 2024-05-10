@@ -7,17 +7,13 @@ let weather = {
         .then((data) => this.displayWeather(data)); //log data to console for user to see
 
     },
-
-
-
     displayWeather: function(data) { //assign particular pieces from object
         const { name } = data;
         const{ icon, description } = data.weather[0];
         const {temp, humidity } = data.main;
         const { speed } = data.wind;
-       
 
-        console.log(name, icon, description, temp, humidity, speed);
+        console.log(name, icon, description, temp, humidity, speed, weather);
         document.querySelector(".city").innerText = "Todays weather in: " + name;
         document.querySelector(".icon").src="http://openweathermap.org/img/wn/" + icon + ".png";
         document.querySelector(".description").innerText= description;
