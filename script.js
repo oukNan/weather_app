@@ -34,8 +34,20 @@ let weather = {
 let weeklyWeather = {
     "apiKey": "858688eca31355a69fbb43d48c885e20",
     fetchWeather: function(city) {
+        fetch("https://api.openweathermap.org/data/2.5/weather?q=London&appid=" + this.apiKey)
+        then.((data) => this.displayWeeklyWeather(data));
 
-    }
+        
+    },
+    displayWeeklyWeather: function(data) {
+        const { temp } = data.main;
+        console.log(temp);
+
+        document.querySelector(".listWeather").innerText = temp;
+    },
+        search: function() {
+            this.fetchWeather(document.querySelector(".searchbar").value);
+        },
 }
 
 document.querySelector(".searchbar").addEventListener("keyup", function(event){
