@@ -3,7 +3,6 @@ let weather = {
     fetchWeather: function(city) {
         fetch("https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric&appid=" + this.apiKey
         )
-        fetch("https://api.openweathermap.org/data/2.5/forecast/daily?q=London&units=metric&cnt=7&appid={this.apiKey}")
         .then((response) => response.json()) //the promise to return data
         .then((data) => this.displayWeather(data)); //log data to console for user to see
     },
